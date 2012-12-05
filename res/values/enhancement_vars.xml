@@ -6,4 +6,7 @@
 
     <!-- Hostname setting -->
     <string name="device_hostname">Device hostname</string>
+
+	<!-- Launch Dev Tools -->
+	<string name="development_tools_title">Development tools</string>
 </resources>

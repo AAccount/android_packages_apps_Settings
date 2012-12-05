@@ -159,6 +159,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private static final String TERMINAL_APP_PACKAGE = "com.android.terminal";
 
+    private static final String DEVELOPMENT_TOOLS = "development_tools";
+
     private static final int RESULT_DEBUG_APP = 1000;
 
     private static final String PERSISTENT_DATA_BLOCK_PROP = "ro.frp.pst";
@@ -230,6 +232,9 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private CheckBoxPreference mShowAllANRs;
 
     private PreferenceScreen mProcessStats;
+
+    private PreferenceScreen mDevelopmentTools;
+
     private final ArrayList<Preference> mAllPrefs = new ArrayList<Preference>();
 
     private final ArrayList<CheckBoxPreference> mResetCbPrefs
@@ -365,6 +370,10 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
         mProcessStats = (PreferenceScreen) findPreference(PROCESS_STATS);
         mAllPrefs.add(mProcessStats);
+		
+		mDevelopmentTools = (PreferenceScreen) findPreference(DEVELOPMENT_TOOLS);
+        mAllPrefs.add(mDevelopmentTools);
+
     }
 
     private ListPreference addListPreference(String prefKey) {
