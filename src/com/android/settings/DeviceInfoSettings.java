@@ -97,17 +97,20 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
         findPreference(KEY_KERNEL_VERSION).setSummary(getFormattedKernelVersion());
         setValueSummary(KEY_MOD_VERSION, "ro.omni.version");
 
-        if (!SELinux.isSELinuxEnabled()) {
+        if (!SELinux.isSELinuxEnabled()) 
+		{
             String status = getResources().getString(R.string.selinux_status_disabled);
             setStringSummary(KEY_SELINUX_STATUS, status);
-        } else if (!SELinux.isSELinuxEnforced()) {
+        } 
+		else if (!SELinux.isSELinuxEnforced()) 
+		{
             String status = getResources().getString(R.string.selinux_status_permissive);
             setStringSummary(KEY_SELINUX_STATUS, status);
         }
-
+		findPreference(KEY_SELINUX_STATUS).setEnabled(true);
         // Remove selinux information if property is not present
-        removePreferenceIfPropertyMissing(getPreferenceScreen(), KEY_SELINUX_STATUS,
-                PROPERTY_SELINUX_STATUS);
+        //removePreferenceIfPropertyMissing(getPreferenceScreen(), KEY_SELINUX_STATUS,
+                //PROPERTY_SELINUX_STATUS);
 
         // Remove Safety information preference if PROPERTY_URL_SAFETYLEGAL is not set
         removePreferenceIfPropertyMissing(getPreferenceScreen(), "safetylegal",
