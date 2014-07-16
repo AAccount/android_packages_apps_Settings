@@ -101,6 +101,19 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 
+//Import the extra packages so settings knows what to display on
+//   the right pane
+import com.brewcrewfoo.performance.activities.MainActivity;
+import org.omnirom.omnigears.interfacesettings.BarsSettings;
+import org.omnirom.omnigears.interfacesettings.MenusSettings;
+import org.omnirom.omnigears.chameleonos.ActiveDisplaySettings;
+import org.omnirom.omnigears.interfacesettings.NotificationPanelSettings;
+import org.omnirom.omnigears.interfacesettings.MoreInterfaceSettings;
+import com.android.settings.HomeSettings;
+import org.omnirom.omnigears.ButtonSettings;
+import com.android.settings.applications.AppOpsSummary;
+import com.android.settings.superuser.PolicyNativeFragment;
+
 /**
  * Top-level settings activity to handle single pane and double pane UI layout.
  */
@@ -360,7 +373,17 @@ public class Settings extends PreferenceActivity
         PaymentSettings.class.getName(),
         KeyboardLayoutPickerFragment.class.getName(),
         BlacklistSettings.class.getName(),
-        QuietHours.class.getName()
+        QuietHours.class.getName(),
+		MainActivity.class.getName(), //new kitkat stuff in settings
+		BarsSettings.class.getName(),
+		MenusSettings.class.getName(),
+		ActiveDisplaySettings.class.getName(),
+		NotificationPanelSettings.class.getName(),
+		MoreInterfaceSettings.class.getName(),
+		HomeSettings.class.getName(),
+		ButtonSettings.class.getName(),
+		AppOpsSummary.class.getName(),
+		PolicyNativeFragment.class.getName()
     };
 
     @Override
