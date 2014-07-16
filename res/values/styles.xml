@@ -210,7 +210,7 @@
     <style name="KeyguardAppWidgetItem">
         <item name="android:textSize">18sp</item>
     </style>
-<<<<<<< HEAD
+
 
     <!-- Scrollbar style OUTSIDE_OVERLAY -->
     <integer name="preference_scrollbar_style">33554432</integer>
@@ -218,6 +218,5 @@
     <style name="ApnPreference">
         <item name="android:layout">@layout/apn_preference_layout</item>
     </style>
-=======
->>>>>>> parent of 56f51a8... Single pane for 10" Settings
+
 </resources>
