@@ -99,6 +99,12 @@
             android:summary="@string/enable_terminal_summary" />
 
         <CheckBoxPreference
+            android:key="adb_over_network"
+            android:title="@string/adb_over_network"
+            android:summary="@string/adb_over_network_summary"
+            android:dependency="enable_adb"/>
+
+        <CheckBoxPreference
             android:key="bugreport_in_power"
             android:title="@string/bugreport_in_power"
             android:summary="@string/bugreport_in_power_summary"/>
@@ -308,6 +314,11 @@
             android:key="show_cpu_usage"
             android:title="@string/show_cpu_usage"
             android:summary="@string/show_cpu_usage_summary"/>
+
+        <CheckBoxPreference
+            android:key="show_cpu_info"
+            android:title="@string/show_cpu_info"
+            android:summary="@string/show_cpu_info_summary"/>
 
         <ListPreference
             android:key="track_frame_time"
