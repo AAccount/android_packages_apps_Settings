@@ -17,6 +17,9 @@
 -keep class com.koushikdutta.**
 -keep class com.android.settings.cyanogenmod.superuser.**
 
+# Keep OmniGears stuff
+-keep class org.omnirom.omnigears.*
+
 # Keep click responders
 -keepclassmembers class com.android.settings.inputmethod.UserDictionaryAddWordActivity {
   *** onClick*(...);
