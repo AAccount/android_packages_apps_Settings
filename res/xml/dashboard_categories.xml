@@ -92,8 +92,6 @@
                 android:icon="@drawable/ic_settings_notification_drawer"
                 />
 
-    </dashboard-category>
-
         <!-- Display -->
         <dashboard-tile
                 android:id="@+id/display_settings"
