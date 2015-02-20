@@ -68,8 +68,10 @@ public class QSTileHolder {
         } else if (tileType.equals("hotspot")) {
             resId = R.drawable.ic_qs_hotspot;
             stringId = R.string.hotspot;
+        } else if (tileType.equals("adb_network")) {
+            resId = R.drawable.ic_qs_network_adb_off;
+            stringId = R.string.adb_over_network;
         }
-
         String name = stringId != -1 ? context.getString(stringId) : null;
         return new QSTileHolder(resId, tileType, name);
     }
