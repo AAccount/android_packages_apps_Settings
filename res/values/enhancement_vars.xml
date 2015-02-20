@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-	From CM11 Settings
+	From CM11/12 Settings
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
@@ -10,6 +10,8 @@
 	<!-- Launch Dev Tools -->
 	<string name="development_tools_title">Development tools</string>
 
+	<!-- Extra Quick Settings Tiles-->
 	<string name="adb_over_network">ADB Over Network</string>
 	<string name="qs_title_nfc">NFC</string>
+	<string name="qs_title_compass">Compass</string>
 </resources>
