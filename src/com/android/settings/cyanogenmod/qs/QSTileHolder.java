@@ -71,6 +71,9 @@ public class QSTileHolder {
         } else if (tileType.equals("adb_network")) {
             resId = R.drawable.ic_qs_network_adb;
             stringId = R.string.adb_over_network;
+        } else if (tileType.equals("nfc")) {
+            resId = R.drawable.ic_qs_nfc;
+            stringId = R.string.qs_title_nfc;
         }
         String name = stringId != -1 ? context.getString(stringId) : null;
         return new QSTileHolder(resId, tileType, name);

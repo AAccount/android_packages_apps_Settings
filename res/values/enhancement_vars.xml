@@ -11,4 +11,5 @@
 	<string name="development_tools_title">Development tools</string>
 
 	<string name="adb_over_network">ADB Over Network</string>
+	<string name="qs_title_nfc">NFC</string>
 </resources>
