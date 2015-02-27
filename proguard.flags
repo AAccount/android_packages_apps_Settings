@@ -17,9 +17,11 @@
 -keep class com.android.settings.notificationlight.*
 -keep class com.koushikdutta.**
 -keep class com.android.settings.cyanogenmod.**
+-keep class com.android.settings.preference.*
 
 # Keep OmniGears stuff
 -keep class org.omnirom.omnigears.*
+-keep class org.**
 
 # Keep click responders
 -keepclassmembers class com.android.settings.inputmethod.UserDictionaryAddWordActivity {
