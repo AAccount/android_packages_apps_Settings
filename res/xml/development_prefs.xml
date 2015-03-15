@@ -122,7 +122,7 @@
             android:inputType="textNoSuggestions"
             android:persistent="false" />
 
-        <CheckBoxPreference
+        <SwitchPreference
             android:key="allow_mock_location"
             android:title="@string/allow_mock_location"
             android:summary="@string/allow_mock_location_summary"/>
