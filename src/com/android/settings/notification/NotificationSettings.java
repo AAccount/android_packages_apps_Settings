@@ -79,6 +79,7 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
     private static final String KEY_NOTIFICATION_PULSE = "notification_pulse";
     private static final String KEY_LOCK_SCREEN_NOTIFICATIONS = "lock_screen_notifications";
     private static final String KEY_NOTIFICATION_ACCESS = "manage_notification_access";
+    private static final String KEY_CHARGING_LIGHT = "charging_light";
 
     private static final int SAMPLE_CUTOFF = 2000;  // manually cap sample playback at 2 seconds
 
@@ -109,6 +110,7 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
     private int mRingerMode = -1;
     private CheckBoxPreference mVolumeLinkNotification;
     private PreferenceCategory mSoundCategory;
+    private Preference mChargingLight;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -126,6 +128,13 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
         }
 
         addPreferencesFromResource(R.xml.notification_settings);
+
+        mChargingLight = (Preference) findPreference(KEY_CHARGING_LIGHT);
+        if (mChargingLight != null
+                && !getResources().getBoolean(
+                        com.android.internal.R.bool.config_intrusiveBatteryLed)) {
+            getPreferenceScreen().removePreference(mChargingLight);
+        }
 
         mSoundCategory = (PreferenceCategory) findPreference(KEY_SOUND);
 
@@ -206,12 +215,14 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
                         : mRingerMode == AudioManager.RINGER_MODE_VIBRATE
                         ? com.android.internal.R.drawable.ic_audio_ring_notif_vibrate
                         : com.android.internal.R.drawable.ic_audio_ring_notif);
+                mRingPreference.setTitle(R.string.ring_notification_volume_option_tile);
             } else {
                 mRingPreference.showIcon(mSuppressor != null || mRingerMode == AudioManager.RINGER_MODE_SILENT
                         ? R.drawable.ring_ring_mute
                         : mRingerMode == AudioManager.RINGER_MODE_VIBRATE
                         ? com.android.internal.R.drawable.ic_audio_ring_notif_vibrate
                         :R.drawable.ring_ring);
+                mRingPreference.setTitle(R.string.ring_volume_option_title);
             }
         }
     }
