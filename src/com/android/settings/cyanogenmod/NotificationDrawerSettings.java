@@ -17,10 +17,6 @@ package com.android.settings.cyanogenmod;
 
 import android.os.Bundle;
 import android.preference.Preference;
-import android.preference.CheckBoxPreference;
-import android.content.ContentResolver;
-import android.preference.PreferenceScreen;
-import android.provider.Settings;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -28,17 +24,13 @@ import com.android.settings.cyanogenmod.qs.QSTiles;
 
 public class NotificationDrawerSettings extends SettingsPreferenceFragment {
     private Preference mQSTiles;
-	private CheckBoxPreference mQSFirst;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.notification_drawer_settings);
-		final ContentResolver resolver = getContentResolver();
 
         mQSTiles = findPreference("qs_order");
-		mQSFirst = (CheckBoxPreference) findPreference("sysui_qs_main_tiles");
-		mQSFirst.setChecked(Settings.Secure.getInt(resolver, Settings.Secure.QS_USE_MAIN_TILES, 0) != 0);
     }
 
     @Override
@@ -49,17 +41,4 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment {
         mQSTiles.setSummary(getResources().getQuantityString(R.plurals.qs_tiles_summary,
                     qsTileCount, qsTileCount));
     }
-
-	@Override
-	public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) 
-	{
-		if(preference == mQSFirst)
-		{
-			boolean checked = ((CheckBoxPreference)preference).isChecked();
-			Settings.Secure.putInt(getActivity().getContentResolver(),
-                    Settings.Secure.QS_USE_MAIN_TILES, checked ? 1:0);
-			return true;
-		}
-        return super.onPreferenceTreeClick(preferenceScreen, preference);
-	}
 }
