@@ -42,11 +42,11 @@ public class QSTiles extends Fragment implements
 
     private static final String[] AVAILABLE_TILES = {
         "wifi" ,"bt", "cell", "airplane", "rotation", "flashlight",
-        "location", "cast", "inversion", "hotspot", "adb_network", "nfc"
+        "location", "cast", "inversion", "hotspot", "adb_network"
     };
 
     private static final String QS_DEFAULT_ORDER =
-            "wifi,bt,cell,airplane,rotation,flashlight,location";
+            "wifi,bt,cell,airplane,rotation,flashlight,location,cast";
 
     private DraggableGridView mDraggableGridView;
     private View mAddDeleteTile;
