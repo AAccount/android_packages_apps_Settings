@@ -9,6 +9,4 @@
 
 	<!-- Launch Dev Tools -->
 	<string name="development_tools_title">Development tools</string>
-
-	<string name="adb_over_network">ADB Over Network</string>
 </resources>
