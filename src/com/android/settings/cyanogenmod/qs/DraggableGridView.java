@@ -87,7 +87,7 @@ public class DraggableGridView extends ViewGroup implements
         setListeners();
         setChildrenDrawingOrderEnabled(true);
 
-        mUseMainTiles = Settings.Secure.getInt(getContext().getContentResolver(),
+        mUseMainTiles = Settings.System.getInt(getContext().getContentResolver(),
                 Settings.System.QS_USE_MAIN_TILES, 1) == 1;
     }
 
