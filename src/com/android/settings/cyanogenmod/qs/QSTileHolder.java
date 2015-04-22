@@ -74,9 +74,6 @@ public class QSTileHolder {
         } else if (tileType.equals("nfc")) {
             resId = R.drawable.ic_qs_nfc;
             stringId = R.string.qs_title_nfc;
-        } else if (tileType.equals("compass")) {
-            resId = R.drawable.ic_qs_compass;
-            stringId = R.string.qs_title_compass;
         }
         String name = stringId != -1 ? context.getString(stringId) : null;
         return new QSTileHolder(resId, tileType, name);
