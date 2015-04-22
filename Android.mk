@@ -4,7 +4,6 @@ include $(CLEAR_VARS)
 LOCAL_JAVA_LIBRARIES := bouncycastle conscrypt telephony-common ims-common
 LOCAL_STATIC_JAVA_LIBRARIES := \
 	android-support-v4 \
-	android-support-v7-cardview \
 	android-support-v13 \
 	jsr305
 
@@ -22,9 +21,7 @@ LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res \
 	packages/apps/PerformanceControl/res \
 	packages/apps/OmniGears/res \
 	$(LOCAL_PATH)/../../../external/koush/Widgets/Widgets/res \
-	$(LOCAL_PATH)/../../../external/koush/Superuser/Superuser/res \
-    frameworks/support/v7/cardview/res
-
+	$(LOCAL_PATH)/../../../external/koush/Superuser/Superuser/res
 
 LOCAL_ASSET_DIR += packages/apps/PerformanceControl/assets
 
@@ -32,8 +29,7 @@ LOCAL_AAPT_INCLUDE_ALL_RESOURCES := true
 LOCAL_AAPT_FLAGS := --auto-add-overlay \
 	--extra-packages com.brewcrewfoo.performance \
 	--extra-packages org.omnirom.omnigears \
-	--extra-packages com.koushikdutta.superuser:com.koushikdutta.widgets \
-    --extra-packages android.support.v7.cardview
+	--extra-packages com.koushikdutta.superuser:com.koushikdutta.widgets
 
 LOCAL_PACKAGE_NAME := Settings
 LOCAL_CERTIFICATE := platform
