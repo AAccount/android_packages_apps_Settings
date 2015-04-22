@@ -25,6 +25,9 @@ import com.android.settings.cyanogenmod.qs.QSTiles;
 public class NotificationDrawerSettings extends SettingsPreferenceFragment {
     private Preference mQSTiles;
 
+	public NotificationDrawerSettings ()
+	{}
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);

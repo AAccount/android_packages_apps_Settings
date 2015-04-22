@@ -16,7 +16,7 @@
 -keep class com.android.settings.notification.*
 -keep class com.android.settings.notificationlight.*
 -keep class com.koushikdutta.**
--keep class com.android.settings.cyanogenmod.**
+-keep class com.android.settings.cyanogenmod.superuser.**
 
 # Keep OmniGears stuff
 -keep class org.omnirom.omnigears.*
