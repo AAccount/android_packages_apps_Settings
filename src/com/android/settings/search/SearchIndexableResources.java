@@ -49,6 +49,7 @@ import com.android.settings.voice.VoiceInputSettings;
 import com.android.settings.wifi.AdvancedWifiSettings;
 import com.android.settings.wifi.SavedAccessPointsWifiSettings;
 import com.android.settings.wifi.WifiSettings;
+import com.android.settings.WifiCallingSettings;
 
 import org.omnirom.omnigears.ButtonSettings;
 import org.omnirom.omnigears.interfacesettings.BarsSettings;
@@ -274,6 +275,13 @@ public final class SearchIndexableResources {
                         NO_DATA_RES_ID,
                         DeviceInfoSettings.class.getName(),
                         R.drawable.ic_settings_about));
+
+        sResMap.put(WifiCallingSettings.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(WifiCallingSettings.class.getName()),
+                        R.xml.wifi_calling_settings,
+                        WifiCallingSettings.class.getName(),
+                        R.drawable.ic_settings_wireless));
 
         // omni additions
         sResMap.put(ButtonSettings.class.getName(),
