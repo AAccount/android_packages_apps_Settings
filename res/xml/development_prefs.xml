@@ -104,7 +104,6 @@
             android:summary="@string/adb_over_network_summary"
             android:dependency="enable_adb"/>
 
-
         <!--<CheckBoxPreference
             android:key="bugreport_in_power"
             android:title="@string/bugreport_in_power"
@@ -121,6 +120,7 @@
             android:imeOptions="actionDone"
             android:inputType="textNoSuggestions"
             android:persistent="false" />
+
 
         <SwitchPreference
             android:key="allow_mock_location"
